@@ -37,7 +37,16 @@ function updateCountryLink() {
     let formattedCountryName = capitalizeWords(countryName);
     let normalizedCountryName = normalizeString(countryName);
     countryLink.textContent = formattedCountryName;
-    countryLink.href = `./pages/${normalizedCountryName.toLowerCase().replace(/ /g, '-')}.html`; 
+
+    // MANEJAR CASO DE COREA DEL SUR 
+    if (normalizedCountryName.toLowerCase() === "corea del sur") {
+        normalizedCountryName = "corea";
+    } else {
+        normalizedCountryName = normalizedCountryName.toLowerCase().replace(/ /g, '-');
+    }
+
+    countryLink.textContent = formattedCountryName;
+    countryLink.href = `./pages/${normalizedCountryName}.html`;
 }
 
 // FUNCIÓN PARA MOVER EL SLIDER
@@ -68,3 +77,19 @@ function moveSlider(direction) {
 
 // INICIALIZAR EL ENLACE DEL PAÍS EN LA CARGA INICIAL
 updateCountryLink();
+
+// FUNCIÓN PARA REDIRIGIR CUANDO SE HACE CLIC EN EL BOTÓN "VER MÁS"
+function redirigir(event) {
+    const url = event.target.getAttribute('data-url');
+    if (url) {
+        window.location.href = url;
+    }
+}
+
+// AGREGAR EVENTOS A TODOS LOS BOTONES "VER MÁS"
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.info_button button');
+    buttons.forEach(button => {
+        button.addEventListener('click', redirigir);
+    });
+});
