@@ -1,0 +1,55 @@
+.bg-custom-yellow {
+    background-color: #fce87c;
+
+}
+
+.text-custom-yellow {
+    color: #fce87c;
+}
+
+.w-custom{
+
+    width: 1900px;
+    height: 900px;
+
+
+}
+
+/*  */
+
+.image-overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-overlay-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #fbd304, #fce87c, #049c3b, #967e02, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    /* Ajustes para hacer el gradiente más puro */
+    filter: brightness(150%);
+}
