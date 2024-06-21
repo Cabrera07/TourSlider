@@ -11,15 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> Jamaica </title>
-    <link rel="icon" href="/img/jamaica/imgflag.jpg">
+    <link rel="icon" href="/img/jamaica/bandera.jpg">
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-0">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-0 pb-0">
         <div class="container-fluid bg-custom-yellow h-25">
-            <a class="navbar-brand" href="#"> <img height="100px" src="/img/jamaica/img3.png"
+            <a class="navbar-brand" href="#"> <img height="100px" src="/img/jamaica/icono.png"
                     alt="No se a podido cargar la imagen"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -29,10 +29,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#que-visitar"> ¿Qué visitar? </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Transporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Alojamiento</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -60,25 +63,138 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid p-0 pb-5">
         <div class="image-overlay-container">
             <img class="w-custom" src="/img/jamaica/fondo.jpg" alt="No cargo la imagen">
             <div class="overlay-text">
 
                 <h1 class="text-gradient"> ¡OH JAMAICA! </h1>
-                
+
                 <p class="font-roboto">
-                    Uno de los destinos con mejores playas, suave y libre, Jamaica es un país de las maravillas tropicales de paisajes
+                    Uno de los destinos con mejores playas, suave y libre, Jamaica es un país de las maravillas
+                    tropicales de paisajes
                     inspiradores, experiencias increíbles y un vibrante mosaico cultural que se extiende de costa a
                     costa.
                 </p>
             </div>
         </div>
+    </div>
 
-        <!-- Funciones js para estilos de bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <!-- Cards para info independiente -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 m-1" id="que-visitar">
+        <div class="col">
+            <div class="card">
+                <img src="/img/jamaica/bluemontains.jpg" class="card-img-top" alt="Montañas Azules"
+                    style="width: 100%; height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title"> ¿Qué vistar?🏖️ </h5>
+                    <p class="card-text">Explora la vibrante cultura y los paisajes impresionantes de Jamaica. Desde las
+                        playas de Negril con sus arenas blancas y aguas cristalinas hasta las majestuosas cascadas del
+                        río Dunn en Ocho Ríos, además el hermoso Parque Nacional Blue Mountains, hay una infinita
+                        variedad de lugares por descubrir. No te pierdas la
+                        histórica ciudad de Kingston, hogar del Museo de Bob Marley, y disfruta de la tranquilidad de la
+                        Laguna Azul en Port Antonio.</p>
+                    <a href="#que-visitar-info" class="btn btn-primary"> Ver más </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/img/jamaica/transporte.jpg" class="card-img-top" alt="Transporte" style="width: 100%; height: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title"> Transporte🚗 </h5>
+                    <p class="card-text">Moverse por Jamaica es sencillo con varias opciones de transporte disponibles.
+                        Puedes alquilar un coche para una mayor libertad o utilizar los servicios de taxis y autobuses
+                        locales para una experiencia más auténtica. Las rutas de autobús conectan las principales
+                        ciudades y destinos turísticos, y los taxis compartidos son una opción económica para
+                        desplazarse por la isla.</p>
+                    <a href="#" class="btn btn-primary"> Ver más </a>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="margin-top: -4%;">
+            <div class="card">
+                <img src="/img/jamaica/ochorios.jpg" class="card-img-top" alt="Alojamiento" style="width: 100%; height: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title"> Alojamiento🏨 </h5>
+                    <p class="card-text">Desde lujosos resorts frente al mar hasta acogedores bed & breakfast, Jamaica
+                        ofrece una amplia gama de opciones de alojamiento para todos los presupuestos. Si buscas una
+                        experiencia exclusiva, los resorts todo incluido en Montego Bay son ideales. Para una estancia
+                        más auténtica, considera los alojamientos en casas de huéspedes locales o cabañas ecológicas en
+                        áreas rurales.</p>
+                    <a href="#" class="btn btn-primary"> Ver más </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/img/jamaica/clima.jpg" class="card-img-top" alt="Clima" style="width: 100%; height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title"> Clima🌤️ </h5>
+                    <p class="card-text">Jamaica disfruta de un clima tropical durante todo el año, con temperaturas
+                        cálidas y agradables. La temporada alta turística va de diciembre a abril, cuando el clima es
+                        seco y soleado. De mayo a noviembre, la isla experimenta la temporada de lluvias, con breves
+                        chubascos tropicales. A pesar de esto, el clima sigue siendo ideal para disfrutar de las playas
+                        y actividades al aire libre.</p>
+                    <a href="#" class="btn btn-primary"> Ver más </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/img/jamaica/comida.jpg" class="card-img-top" alt="Comida" style="width: 100%; height: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title"> Comida🍤 </h5>
+                    <p class="card-text">La cocina jamaicana es un deleite para los sentidos, con una fusión de sabores
+                        africanos, indios, europeos y caribeños. Prueba el famoso jerk chicken, condimentado con
+                        especias locales, o el ackee and saltfish, el plato nacional. No te pierdas las frutas
+                        tropicales frescas como el mango, la piña y la guayaba, y disfruta de un refrescante vaso de
+                        agua de coco directo de la fuente.</p>
+                    <a href="#" class="btn btn-primary"> Ver más </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="/img/jamaica/cascada.jpg" class="card-img-top" alt="Excursiones" style="width: 100%; height: 350px;">
+                <div class="card-body">
+                    <h5 class="card-title"> Excursiones🏞️ </h5>
+                    <p class="card-text">Jamaica ofrece una gran variedad de excursiones para todos los gustos. Explora
+                        las Montañas Azules, conocidas por su café de fama mundial, o sumérgete en las aguas turquesas
+                        de las playas de Negril. Aventúrate en un safari en el río Negro para avistar cocodrilos y aves
+                        exóticas, o disfruta de una noche mágica en la Laguna Luminosa, donde el agua brilla en la
+                        oscuridad.</p>
+                    <a href="#" class="btn btn-primary"> Ver más </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr>
+
+    <div class="card mb-3" style="max-width: 540px;" id="que-visitar-info">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/img/jamaica/" class="img-fluid rounded-start" alt="Excursiones">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <!-- Funciones js para estilos de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </body>
 
