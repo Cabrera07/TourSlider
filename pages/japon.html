@@ -3,33 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switzerland</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tour Travel Japan</title>
+    <link rel="stylesheet" href="../css/japon.css">
+    
 </head>
 <body>
-    <div class="country-info">
-        <h1>Switzerland</h1>
-        <p>Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps.</p>
-        <div class="country-details">
-            <h2>Quick Facts</h2>
-            <ul>
-                <li><strong>Capital:</strong> Bern</li>
-                <li><strong>Population:</strong> 8.5 million</li>
-                <li><strong>Languages:</strong> German, French, Italian, Romansh</li>
-                <li><strong>Currency:</strong> Swiss Franc (CHF)</li>
-            </ul>
+    <nav>
+        <div class="navbar-brand">   Tour Slide Japón</div>
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Tours</a>
         </div>
-        <img src="https://i.ibb.co/qCkd9jS/img1.jpg" alt="Switzerland">
-        <div class="attractions">
-            <h2>Top Attractions</h2>
-            <ul>
-                <li>The Matterhorn</li>
-                <li>Lake Geneva</li>
-                <li>Chateau de Chillon</li>
-                <li>The Jungfrau Region</li>
-            </ul>
+    </nav>
+    <div class="container">
+        <div class="country-info">
+            <h1>Japón</h1>
+            <p>Japón es uno de los países más fascinantes no solo de Asia, sino del mundo entero. Se trata de un país insular que se extiende a lo largo de la costa Pacífica del nordeste de Asia. 
+
+                Conformado por cuatro islas principales, Honshu, Hokkaido, Kyushu y Shikoku, Japón está rodeado, además, de 4.000 pequeñas islas. De este territorio, tan solo un 18% es habitable, mientras que, el resto, está conformado por montañas. </p>
+            
+                <div class="country-details">
+                <h2>Quick Facts</h2>
+                <ul>
+                    <li><strong>Capital:</strong> Tokyo</li>
+                    <li><strong>Poblacion:</strong> 126.3 millón</li>
+                    <li><strong>Lenguaje:</strong> Japonés</li>
+                    <li><strong>Moneda:</strong> Japanese Yen (JPY)</li>
+                </ul>
+            </div>
+            <div class="attractions">
+                <h2>Lugares reconocidos de Japón</h2>
+            </div>
+
+            <!-- SLIDER SECTION -->
+            <div class="slider">
+                <div class="list">
+                    <div class="item active" data-country="Mount Fuji">
+                        <img class="country_img" src="../img/japon/montefuji.jpg" alt="Monte Fuji">
+                        <div class="content">
+                            <div class="type">Mount Fuji</div>
+                            <div class="info_button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-country="Tokyo Skytree">
+                        <img class="country_img" src="../img/japon/Tokyo.jpg" alt="Tokyo Skytree">
+                        <div class="content">
+                            <div class="type">Tokyo Streets</div>
+                            <div class="info_button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-country="Kyoto Temples">
+                        <img class="country_img" src="../img/japon/Kiyomizu-temple-Kiyomizu-temple-gate.jpg" alt="Kyoto Temples">
+                        <div class="content">
+                            <div class="type">Kyoto Temples</div>
+                            <div class="info_button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-country="Osaka Castle">
+                        <img class="country_img" src="../img/japon/que_visitar_en_japon_primera_vez_castillo_osaka.jpg" alt="Osaka Castle">
+                        <div class="content">
+                            <div class="type">Osaka Castle</div>
+                            <div class="info_button">
+                           <!--       <button data-url="./pages/osaka_castle.html">VER MÁS</button> -->  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nextPrevArrows">
+                    <button id="prev">&lt;</button>
+                    <button id="next">&gt;</button>
+                </div>
+            </div>
+            
+            <p><a href="#" class="back-button">Frekear</a></p>
         </div>
-        <p><a href="#" class="back-button">Back to Slider</a></p>
     </div>
+    <footer></footer>
+    <script>
+     
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.slider .list .item');
+            let currentIndex = 0;
+
+            const showItem = index => {
+                items.forEach((item, i) => {
+                    item.classList.toggle('active', i === index);
+                });
+            };
+
+            document.getElementById('next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItem(currentIndex);
+            });
+
+            document.getElementById('prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItem(currentIndex);
+            });
+
+            showItem(currentIndex); // Initial display
+        });
+
+
+
+
+
+
+
+        function loadCountryInfo(country) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', `${country}.html`, true);
+    xhr.onload = function() {
+        if (this.status == 200) {
+            container.innerHTML = this.responseText;
+            document.querySelector('.back-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                location.reload();
+            });
+            container.classList.add('fade-in');
+            setTimeout(() => {
+                container.classList.remove('fade-in');
+            }, 1000);
+        }
+    };
+    xhr.send();
+        }
+
+
+        
+    </script>
 </body>
 </html>
