@@ -3,33 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switzerland</title>
+    <title>Japan</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://i.imgur.com/5QF5pJk.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .country-info {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 50px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .country-details, .attractions {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .country-details ul, .attractions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .country-details li, .attractions li {
+            margin: 5px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #666;
+        }
+    </style>
 </head>
 <body>
     <div class="country-info">
-        <h1>Switzerland</h1>
-        <p>Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps.</p>
+        <h1>Japan</h1>
+        <p>Japan is an island country in East Asia, known for its rich culture, advanced technology, and beautiful landscapes.</p>
         <div class="country-details">
             <h2>Quick Facts</h2>
             <ul>
-                <li><strong>Capital:</strong> Bern</li>
-                <li><strong>Population:</strong> 8.5 million</li>
-                <li><strong>Languages:</strong> German, French, Italian, Romansh</li>
-                <li><strong>Currency:</strong> Swiss Franc (CHF)</li>
+                <li><strong>Capital:</strong> Tokyo</li>
+                <li><strong>Population:</strong> 126.3 million</li>
+                <li><strong>Languages:</strong> Japanese</li>
+                <li><strong>Currency:</strong> Japanese Yen (JPY)</li>
             </ul>
         </div>
-        <img src="https://i.ibb.co/qCkd9jS/img1.jpg" alt="Switzerland">
+        <img src="../img/japon/wepajapon-3.jpg" alt="Japan" style="width:100%; height:auto; border-radius:10px;">
         <div class="attractions">
             <h2>Top Attractions</h2>
             <ul>
-                <li>The Matterhorn</li>
-                <li>Lake Geneva</li>
-                <li>Chateau de Chillon</li>
-                <li>The Jungfrau Region</li>
+                <li>Mount Fuji</li>
+                <li>Tokyo Skytree</li>
+                <li>Kyoto Temples</li>
+                <li>Osaka Castle</li>
             </ul>
         </div>
         <p><a href="#" class="back-button">Back to Slider</a></p>
     </div>
+    <script>
+        document.querySelector('.back-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Returning to the slider...');
+        });
+    </script>
 </body>
 </html>
