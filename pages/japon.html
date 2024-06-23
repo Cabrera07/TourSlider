@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan</title>
+    <title>Japan Travel Agency</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('https://i.imgur.com/5QF5pJk.jpg') no-repeat center center fixed;
+            font-family: "Playwrite NG Modern", cursive;
+            background: url('../img/japon/wepajapon-3.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            font-style: normal;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f0a500;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .container {
             text-align: center;
+            padding: 100px 20px;
         }
 
         .country-info {
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             margin: 50px auto;
-            width: 80%;
+            width: 90%;
             border-radius: 10px;
         }
 
@@ -46,7 +80,7 @@
             display: inline-block;
             padding: 10px 20px;
             margin-top: 20px;
-            background-color: #444;
+            background-color: #f0a500;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -54,39 +88,205 @@
         }
 
         .back-button:hover {
-            background-color: #666;
+            background-color: #d48900;
+        }
+
+        /* SLIDER STYLES */
+        .slider {
+            height: 60vh;
+            margin-top: 20px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .slider .list .item {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            display: none;
+        }
+
+        .slider .list .item.active {
+            display: block;
+        }
+
+        .slider .list .item .country_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .slider .list .item .content {
+            position: absolute;
+            top: 20%;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-shadow: 0 5px 10px #0004;
+        }
+
+        .slider .list .item .content .logo {
+            margin-bottom: 20px;
+            height: 100px;
+            filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.8));
+        }
+
+        .slider .list .item .content .type {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .slider .list .item .info_button button {
+            background-color: #eee;
+            cursor: pointer;
+            transition: 0.4s;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            font-family: Poppins;
+            font-weight: 500;
+            letter-spacing: 2px;
+            box-shadow: 3px 4px 5px 1px rgb(0 0 0 / 20%);
+        }
+
+        .slider .list .item .info_button button:hover {
+            background: #030303;
+            color: #fff;
+        }
+
+        .nextPrevArrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nextPrevArrows button {
+            background-color: #030303;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .nextPrevArrows button:hover {
+            background-color: #fff;
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <div class="country-info">
-        <h1>Japan</h1>
-        <p>Japan is an island country in East Asia, known for its rich culture, advanced technology, and beautiful landscapes.</p>
-        <div class="country-details">
-            <h2>Quick Facts</h2>
-            <ul>
-                <li><strong>Capital:</strong> Tokyo</li>
-                <li><strong>Population:</strong> 126.3 million</li>
-                <li><strong>Languages:</strong> Japanese</li>
-                <li><strong>Currency:</strong> Japanese Yen (JPY)</li>
-            </ul>
+    <nav>
+        <div class="navbar-brand">Travel Japan</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Tours</a>
+            <a href="#">Contact</a>
         </div>
-        <img src="../img/japon/wepajapon-3.jpg" alt="Japan" style="width:100%; height:auto; border-radius:10px;">
-        <div class="attractions">
-            <h2>Top Attractions</h2>
-            <ul>
-                <li>Mount Fuji</li>
-                <li>Tokyo Skytree</li>
-                <li>Kyoto Temples</li>
-                <li>Osaka Castle</li>
-            </ul>
+    </nav>
+    <div class="container">
+        <div class="country-info">
+            <h1>Japan</h1>
+            <p>Japan is an island country in East Asia, known for its rich culture, advanced technology, and beautiful landscapes.</p>
+            <div class="country-details">
+                <h2>Quick Facts</h2>
+                <ul>
+                    <li><strong>Capital:</strong> Tokyo</li>
+                    <li><strong>Population:</strong> 126.3 million</li>
+                    <li><strong>Languages:</strong> Japanese</li>
+                    <li><strong>Currency:</strong> Japanese Yen (JPY)</li>
+                </ul>
+            </div>
+            <div class="attractions">
+                <h2>Top Attractions</h2>
+            </div>
+
+            <!-- SLIDER SECTION -->
+            <div class="slider">
+                <div class="list">
+                    <div class="item active" data-country="Mount Fuji">
+                        <img class="country_img" src="../img/japon/montefuji.jpg" alt="Monte Fuji">
+                        <div class="content">
+                            <div class="type">Mount Fuji</div>
+                            <div class="info_button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-country="Tokyo Skytree">
+                        <img class="country_img" src="../img/japon/Tokyo.jpg" alt="Tokyo Skytree">
+                        <div class="content">
+                            <div class="type">Tokyo Skytree</div>
+                            <div class="info_button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-country="Kyoto Temples">
+                        <img class="country_img" src="../img/japon/Kiyomizu-temple-Kiyomizu-temple-gate.jpg" alt="Kyoto Temples">
+                        <div class="content">
+                            <div class="type">Kyoto Temples</div>
+                            <div class="info_button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-country="Osaka Castle">
+                        <img class="country_img" src="../img/japon/que_visitar_en_japon_primera_vez_castillo_osaka.jpg" alt="Osaka Castle">
+                        <div class="content">
+                            <div class="type">Osaka Castle</div>
+                            <div class="info_button">
+                           <!--       <button data-url="./pages/osaka_castle.html">VER MÁS</button> -->  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nextPrevArrows">
+                    <button id="prev">&lt;</button>
+                    <button id="next">&gt;</button>
+                </div>
+            </div>
+            
+            <p><a href="#" class="back-button">Back to Home</a></p>
         </div>
-        <p><a href="#" class="back-button">Back to Slider</a></p>
     </div>
     <script>
         document.querySelector('.back-button').addEventListener('click', function(event) {
             event.preventDefault();
             alert('Returning to the slider...');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.slider .list .item');
+            let currentIndex = 0;
+
+            const showItem = index => {
+                items.forEach((item, i) => {
+                    item.classList.toggle('active', i === index);
+                });
+            };
+
+            document.getElementById('next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % items.length;
+                showItem(currentIndex);
+            });
+
+            document.getElementById('prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showItem(currentIndex);
+            });
+
+            showItem(currentIndex); // Initial display
         });
     </script>
 </body>
