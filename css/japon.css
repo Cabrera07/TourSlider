@@ -1,7 +1,7 @@
 
 body {
 margin: 0;
-font-family: "Playwrite NG Modern", cursive;
+font-family: 'Roboto', sans-serif;
 background: url('../img/japon/wepajapon-3.jpg') no-repeat center center fixed;
 background-size: cover;
 color: white;
@@ -9,7 +9,7 @@ font-style: normal;
 }
 
 nav {
-background: rgb(0, 0, 0);
+background: rgba(126, 5, 156, 0.959);
 padding: 20px 0px;
 position: fixed;
 width: 100%;
@@ -29,7 +29,7 @@ transition: color 0.3s ease;
 }
 
 nav a:hover {
-color: #f0a500;
+color: #ff5e00;
 }
 
 
@@ -138,10 +138,10 @@ font-weight: bold;
 }
 
 .slider .list .item .info_button button {
-background-color: #eee;
+background-color: #ff99e0;
 cursor: pointer;
 transition: 0.4s;
-border-radius: 10px;
+border-radius: 0px;
 padding: 10px 20px;
 margin-top: 20px;
 border: none;
@@ -168,10 +168,10 @@ transform: translateY(-50%);
 .nextPrevArrows button {
 background-color: #03030338;
 border: none;
-color: #fff;
+color: #e6e6e6;
 font-size: 1.5em;
 padding: 10px;
-border-radius: 50%;
+border-radius: 0%;
 cursor: pointer;
 transition: 0.4s;
 }
@@ -191,3 +191,18 @@ top: -70px;
 position: center;
 }
 
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(69, 3, 99, 0.37);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
