@@ -4,7 +4,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background: url('../img/venezuela/OIP.jpg') no-repeat center center fixed;
+            background: url('../img/venezuela/Venezuela-lugares-Canaima-Enviajes.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
         }
@@ -15,7 +15,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgb(0, 0, 0);
             position: fixed;
             width: 100%;
             top: 0;
@@ -87,7 +87,7 @@
         .footer {
             text-align: center;
             padding: 1rem;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.815);
             position: fixed;
             width: 100%;
             bottom: 0;
