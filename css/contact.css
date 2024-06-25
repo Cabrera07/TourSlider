@@ -1,0 +1,221 @@
+/* IMPORTACIÓN DE FUENTES*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* ESTILO GENERAL */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Bellota Text', cursive;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100vh;
+   width: 100%;
+   background: #f2f3f7;
+   overflow-x: hidden;
+}
+
+/* ESTILO DEL TÍTULO */
+.title {
+   margin-top: 30px;
+   color: #ffffff;
+   font-size: 2.5rem;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1px;
+   width: 100%;
+   text-shadow: 3px 3px 5px rgb(113, 113, 113);
+   background: rgba(80, 79, 79, 0);
+    box-shadow: 0 8px 32px 0 rgba(89, 89, 89, 0.37);
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+   
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    margin-top: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+/* ESTILO DE LAS TARJETAS */
+.container .card {
+   width: 330px;
+   height: 416px;
+   padding: 60px 30px;
+   margin: 20px;
+   background: rgb(159, 157, 157);
+   box-shadow: 0.6em 0.6em 0.5em #232323,
+               -0.5em -0.5em .5em #1f1f1f;
+   border-radius: 20px;
+}
+
+/* CONTENIDO DE LAS TARJETAS */
+.container .card .content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+/* ESTILO DE LA IMAGEN EN LAS TARJETAS */
+.container .card .content .imgBx {
+   width: 180px;
+   height: 180px;
+   border-radius: 50%;
+   position: relative;
+   margin-bottom: 20px;
+   overflow: hidden;
+   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.container .card .content .imgBx img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* ESTILO DEL TEXTO EN LAS TARJETAS */
+.container .card .content .contentBx h4 {
+   color: #030303;
+   font-size: 1.7rem;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1px;
+}
+
+/* ESTILO DE LOS ENLACES DE REDES SOCIALES */
+.container .card .content .sci {
+   margin-top: 20px;
+}
+
+.container .card .content .sci a {
+   text-decoration: none;
+   color: #3a3b3b;
+   font-size: 30px;
+   margin: 10px;
+   transition: color 0.4s;
+}
+
+.container .card .content .sci a:hover {
+   color: #0905d8;
+}
+
+/* ANIMATED BACKGROUND */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+.background li:nth-child(1) {
+    left: 23%;
+    width: 193px;
+    height: 193px;
+    bottom: -193px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 48%;
+    width: 173px;
+    height: 173px;
+    bottom: -173px;
+    animation-delay: 5s;
+}
+.background li:nth-child(3) {
+    left: 40%;
+    width: 172px;
+    height: 172px;
+    bottom: -172px;
+    animation-delay: 2s;
+}
+.background li:nth-child(4) {
+    left: 64%;
+    width: 196px;
+    height: 196px;
+    bottom: -196px;
+    animation-delay: 13s;
+}
+.background li:nth-child(5) {
+    left: 52%;
+    width: 134px;
+    height: 134px;
+    bottom: -134px;
+    animation-delay: 17s;
+}
+.background li:nth-child(6) {
+    left: 44%;
+    width: 165px;
+    height: 165px;
+    bottom: -165px;
+    animation-delay: 10s;
+}
+.background li:nth-child(7) {
+    left: 47%;
+    width: 117px;
+    height: 117px;
+    bottom: -117px;
+    animation-delay: 23s;
+}
+.background li:nth-child(8) {
+    left: 80%;
+    width: 157px;
+    height: 157px;
+    bottom: -157px;
+    animation-delay: 11s;
+}
+.background li:nth-child(9) {
+    left: 59%;
+    width: 126px;
+    height: 126px;
+    bottom: -126px;
+    animation-delay: 36s;
+}
+.background li:nth-child(10) {
+    left: 87%;
+    width: 144px;
+    height: 144px;
+    bottom: -144px;
+    animation-delay: 15s;
+}
