@@ -65,26 +65,26 @@ Si deseas contribuir a este proyecto, sigue los siguientes pasos:
 1. Clona el repositorio:
 
     ```bash
-            git clone https://github.com/Cabrera07/TourSlider.git
+    git clone https://github.com/Cabrera07/TourSlider.git
     ```
 
 2. Crea una rama con una nueva característica o mejora:
   
     ```bash
-        git checkout -b feature/nueva-caracteristica
+    git checkout -b feature/nueva-caracteristica
     ```
 
 3. Realiza los cambios necesarios y haz commit de tus cambios:
 
     ```bash
-        git add .
-        git commit -m "Añadir nueva característica"
+    git add .
+    git commit -m "Añadir nueva característica"
     ```
 
 4. Haz push a la rama:
 
     ```bash
-        git push origin feature/nueva-caracteristica
+    git push origin feature/nueva-caracteristica
     ```
 
 5. Abre un Pull Request en GitHub y describe los cambios realizados.
